@@ -4,20 +4,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Briem+Hand:wght@400;500;600;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;900&display=swap");
 
-
 :root {
   --header-height: 3.5rem;
 
   /* Colors */
-  --hue: 330;
-  --first-color: hsl(var(--hue), 90%, 60%);
-  --first-color-alt: hsl(var(--hue), 82%, 56%);
-  --first-color-light: hsl(var(--hue), 40%, 80%);
+  --hue: 34;
+  --first-color: hsl(var(--hue), 40%, 34%);
+  --first-color-alt: hsl(var(--hue), 37%, 30%);
+  --first-color-light: hsl(var(--hue), 45%, 45%);
   --title-color: hsl(var(--hue), 24%, 16%);
   --text-color: hsl(var(--hue), 8%, 45%);
   --text-color-light: hsl(var(--hue), 8%, 60%);
   --white-color: hsl(0, 0%, 100%);
-  --body-color: hsl(0, 0%, 100%);
+  --body-color: hsl(var(--hue), 25%, 99%);
   --container-color: hsl(0, 0%, 100%);
   --shadow-color: hsla(var(--hue), 90%, 30%, 0.1);
 
@@ -166,7 +165,8 @@ img {
   background-color: var(--first-color);
   color: var(--white-color);
   font-weight: var(--font-semi-bold);
-  padding: 1rem 2rem;
+  padding: 0.5rem 2rem;
+  margin-top: 1rem;
   transition: background-color 0.4s;
 }
 

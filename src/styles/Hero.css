@@ -5,6 +5,7 @@
   background-size: cover;
   background-position: center;
   height: 80vh;
+  border-bottom: 8px solid var(--first-color);
 }
 
 @media screen and (min-width: 1150px) {

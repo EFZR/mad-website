@@ -7,11 +7,12 @@ export default function Header() {
   const [showMenu, setShowMenu] = useState(false);
   const scrollY = useScrollY();
 
-  console.log(scrollY);
-  
+  function handleLink() {
+    setShowMenu(false);
+  }
 
   return (
-    <header className={`header ${scrollY > 75 ? "bg__header" : ""}`}>
+    <header className={`header ${scrollY > 150 ? "bg__header" : ""}`}>
       <nav className="nav container">
         <a href="#" className="nav__logo">
           MAD
@@ -19,27 +20,27 @@ export default function Header() {
         <div className={`nav__menu ${showMenu ? "show__menu" : ""}`}>
           <ul className="nav__list">
             <li className="nav__item">
-              <a href="#" className="nav__link">
+              <a href="#inicio" className="nav__link" onClick={handleLink}>
                 Inicio
               </a>
             </li>
             <li className="nav__item">
-              <a href="#" className="nav__link">
+              <a href="#acerca" className="nav__link" onClick={handleLink}>
                 Acerca
               </a>
             </li>
             <li className="nav__item">
-              <a href="#" className="nav__link">
+              <a href="#" className="nav__link" onClick={handleLink}>
                 Lideres
               </a>
             </li>
             <li className="nav__item">
-              <a href="#" className="nav__link">
+              <a href="#" className="nav__link" onClick={handleLink}>
                 Eventos
               </a>
             </li>
             <li className="nav__item">
-              <a href="#" className="nav__link">
+              <a href="#" className="nav__link" onClick={handleLink}>
                 Contactanos
               </a>
             </li>

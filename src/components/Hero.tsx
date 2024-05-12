@@ -2,7 +2,7 @@ import "@styles/Hero.css";
 
 export default function Hero() {
   return (
-    <section className="section hero">
+    <section className="section hero" id="inicio">
       <div className="hero__data">
         <p>
           Faithful Guardian
