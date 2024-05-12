@@ -1,12 +1,17 @@
 import { useState } from "react";
 import { BiX, BiMenu } from "react-icons/bi";
-import "../styles/Header.css";
+import useScrollY from "@hooks/useScrollY";
+import "@styles/Header.css";
 
 export default function Header() {
   const [showMenu, setShowMenu] = useState(false);
+  const scrollY = useScrollY();
+
+  console.log(scrollY);
+  
 
   return (
-    <header className="header">
+    <header className={`header ${scrollY > 75 ? "bg__header" : ""}`}>
       <nav className="nav container">
         <a href="#" className="nav__logo">
           MAD
@@ -42,7 +47,7 @@ export default function Header() {
           <div className="nav__close">
             <BiX onClick={() => setShowMenu(false)} />
           </div>
-          <span className="nav__logo">mad</span>
+          <span className="nav__logo-menu">mad</span>
         </div>
         <div className="nav__actions">
           <div className="nav__toggle">
