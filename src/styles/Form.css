@@ -1,16 +1,32 @@
 .form__title {
   font-size: 1.5rem;
   margin-bottom: 5rem;
+  text-align: center;
 }
 
 @media screen and (min-width: 576px) {
   .form__title {
     font-size: 3rem;
+    text-align: start;
   }
 }
 
 .form__title span {
   color: var(--first-color);
+}
+
+@media screen and (min-width: 576px) {
+  .container__form {
+    grid-template-columns: 320px;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container__form {
+    grid-template-columns: 640px;
+    justify-content: center;
+  }
 }
 
 @media screen and (min-width: 1150px) {

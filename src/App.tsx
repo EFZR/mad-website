@@ -9,10 +9,12 @@ export default function App() {
   return (
     <>
       <Header />
-      <Hero />
-      <About />
-      <Members />
-      <Form />
+      <main>
+        <Hero />
+        <About />
+        <Members />
+        <Form />
+      </main>
       <Footer />
     </>
   );
