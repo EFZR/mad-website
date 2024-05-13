@@ -1,15 +1,23 @@
 .form__title {
+  font-size: 1.5rem;
   margin-bottom: 5rem;
-  font-size: 3rem;
+}
+
+@media screen and (min-width: 576px) {
+  .form__title {
+    font-size: 3rem;
+  }
 }
 
 .form__title span {
   color: var(--first-color);
 }
 
-.container__form {
-  grid-template-columns: 960px;
-  justify-content: center;
+@media screen and (min-width: 1150px) {
+  .container__form {
+    grid-template-columns: 960px;
+    justify-content: center;
+  }
 }
 
 .form {
@@ -31,6 +39,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .field label {
