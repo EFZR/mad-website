@@ -40,7 +40,7 @@ export default function Header() {
               </a>
             </li>
             <li className="nav__item">
-              <a href="#" className="nav__link" onClick={handleLink}>
+              <a href="#contact" className="nav__link" onClick={handleLink}>
                 Contactanos
               </a>
             </li>

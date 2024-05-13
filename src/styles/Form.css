@@ -1,0 +1,75 @@
+.form__title {
+  margin-bottom: 5rem;
+  font-size: 3rem;
+}
+
+.form__title span {
+  color: var(--first-color);
+}
+
+.container__form {
+  grid-template-columns: 960px;
+  justify-content: center;
+}
+
+.form {
+  row-gap: 3rem;
+}
+
+.name__group {
+  row-gap: inherit;
+}
+
+@media screen and (min-width: 768px) {
+  .name__group {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3rem;
+  }
+}
+
+.field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.field label {
+  position: absolute;
+  cursor: text;
+  top: 0;
+  transition: top 0.2s, font-size 0.2s;
+}
+
+.field textarea {
+  resize: none;
+  padding-top: 1.5rem;
+}
+
+.field input,
+.field textarea {
+  border-bottom: 2px solid var(--first-color);
+
+  &::placeholder {
+    color: transparent;
+  }
+}
+
+.field input:focus ~ .label,
+.field input:not(:placeholder-shown) ~ .label {
+  position: absolute;
+  top: -70%;
+  font-size: var(--smaller-font-size);
+}
+
+.field textarea:focus ~ .label,
+.field textarea:not(:placeholder-shown) ~ .label {
+  position: absolute;
+  top: -15%;
+  font-size: var(--smaller-font-size);
+}
+
+@media screen and (min-width: 768px) {
+  input[type="submit"] {
+    justify-self: center;
+  }
+}
