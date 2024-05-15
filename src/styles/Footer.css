@@ -10,7 +10,6 @@
 
 @media screen and (min-width: 1150px) {
   .footer__container {
-    row-gap: 6rem;
     padding-block: 3.5rem;
   }
 }

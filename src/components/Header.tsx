@@ -35,7 +35,7 @@ export default function Header() {
               </a>
             </li>
             <li className="nav__item">
-              <a href="#" className="nav__link" onClick={handleLink}>
+              <a href="#events" className="nav__link" onClick={handleLink}>
                 Eventos
               </a>
             </li>
