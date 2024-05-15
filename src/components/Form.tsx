@@ -2,7 +2,7 @@ import "@styles/Form.css"
 
 export default function Form() {
   return (
-    <section className="section container" id="contact">
+    <section className="section container form" id="contact">
       <div className="container__form grid">
         <h1 className="form__title">
           Completa el formulario <br />
