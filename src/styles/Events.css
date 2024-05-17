@@ -1,3 +1,71 @@
-#map {
-  height: 180px;
+.events__container {
+  grid-template-rows: 13vh 60vh;
+  grid-template-columns: 100%;
+  box-shadow: 0 12px 24px var(--shadow-color);
+  padding-block: 2rem;
+  border-radius: 1rem;
+}
+
+.carousel {
+  position: relative;
+}
+
+.prev__button,
+.next__button {
+  position: absolute;
+  cursor: pointer;
+  font-size: 1.5rem;
+  background-color: transparent;
+}
+
+.prev__button {
+  top: 50%;
+  left: 1%;
+  transform: translateY(-50%);
+}
+
+.next__button {
+  top: 50%;
+  right: 1%;
+  transform: translateY(-50%);
+}
+
+.carousel__track-container {
+  overflow-x: auto;
+}
+
+.carousel__track {
+  display: flex;
+  height: 100%;
+}
+
+.carousel__slide {
+  flex: 0 0 100%;
+  padding-inline: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.carousel__slide button {
+  color: var(--first-color-light);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.carousel__slide button:hover {
+  color: var(--first-color-alt);
+}
+
+.map {
+  z-index: var(--z-tooltip);
+}
+
+*::-webkit-scrollbar {
+  height: 0.4rem;
+}
+
+*::-webkit-scrollbar-thumb {
+  height: 0.4rem;
 }
