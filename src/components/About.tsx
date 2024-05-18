@@ -3,10 +3,10 @@ import "@styles/About.css"
 
 export default function About() {
   return (
-    <section className="section" id="acerca">
+    <section className="section container about" id="acerca">
       <h1 className="section__title">Acerca</h1>
 
-      <div className="container acerca__container">
+      <div className="acerca__container">
         <p className="acerca__desc">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla interdum eleifend ultrices. Aenean a rutrum magna.
         </p>

@@ -1,7 +1,7 @@
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi"
 import useMap from "@hooks/useMap"
-import "@styles/Events.css"
 import { useRef } from "react";
+import "@styles/Events.css"
 
 export default function Events() {
 
@@ -9,7 +9,7 @@ export default function Events() {
 
   const mapRef = useMap();
 
-  const carouselTrack = useRef<HTMLDivElement>(null)
+  const locationList = useRef<HTMLDivElement>(null)
 
   //#endregion
 
@@ -19,11 +19,12 @@ export default function Events() {
     const locationSlider: JSX.Element[] = []
     for (let i = 0; i < 10; i++) {
       const location: JSX.Element = (
-        <li className="carousel__slide" key={i}>
-          <h3>Casa de john</h3>
-          <span>Residencial las uvas</span>
-          <button>mas..</button>
-        </li>
+        <div className="location__item grid" key={i}>
+          <p>
+            <span className="location__item-title">Casa de Nancy</span><br />
+            Residencial las uvas
+          </p>
+        </div>
       )
 
       locationSlider.push(location)
@@ -32,46 +33,52 @@ export default function Events() {
   }
 
   function prevSlide() {
-    if (carouselTrack.current) {
-      const scrollAmount = carouselTrack.current.clientWidth * -1
-      carouselTrack.current.scrollBy({ left: scrollAmount, behavior: "smooth" })
+    if (locationList.current) {
+      const rect = locationList.current.getBoundingClientRect()
+      const scrollAmount = rect.width * -1
+      locationList.current.scrollBy({ left: scrollAmount, behavior: "smooth" })
     }
   }
 
   function nextSlide() {
-    if (carouselTrack.current) {
-      const scrollAmount = carouselTrack.current.clientWidth * 1
-      carouselTrack.current.scrollBy({ left: scrollAmount, behavior: "smooth" })
+    if (locationList.current) {
+      const rect = locationList.current.getBoundingClientRect()
+      const scrollAmount = rect.width * 1
+      locationList.current.scrollBy({ left: scrollAmount, behavior: "smooth" })
     }
   }
 
   //#endregion
 
   return (
-    <section className="section container" id="events">
+    <section className="section container events" id="events">
       <h1 className="section__title">Eventos</h1>
-
-      <div className="events__container grid">
-        <div className="carousel">
-          <button className="prev__button" onClick={prevSlide}>
-            <BiChevronLeft />
-          </button>
-          <div
-            className="carousel__track-container"
-            ref={carouselTrack}
-            onScroll={(e) => e.preventDefault()}
-          >
-            <ul className="carousel__track">
+      <div className="event__article-container grid">
+        <div className="map__container grid">
+          <div className="slider__wrapper-map">
+            <button
+              type="button"
+              id="prev__slide"
+              className="slide__button"
+              onClick={prevSlide}
+            >
+              <BiChevronLeft />
+            </button>
+            <div className="location__list" ref={locationList}>
               {renderLocation()}
-            </ul>
+            </div>
+            <button
+              type="button"
+              id="next__slide"
+              className="slide__button"
+              onClick={nextSlide}
+            >
+              <BiChevronRight />
+            </button>
           </div>
-          <button className="next__button" onClick={nextSlide}>
-            <BiChevronRight />
-          </button>
+          <div className="map" ref={mapRef}></div>
         </div>
-        <div className="map" ref={mapRef}></div>
       </div>
-
     </section>
   )
 }

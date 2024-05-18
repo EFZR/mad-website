@@ -2,7 +2,7 @@ import "@styles/Members.css";
 
 export default function Members() {
   return (
-    <section className="section container" id="member">
+    <section className="section container member" id="member">
       <div className="member__container grid">
         <div className="member__description-container">
           <p className="member__description">
