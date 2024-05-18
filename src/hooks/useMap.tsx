@@ -9,9 +9,9 @@ export default function useMap(): RefObject<HTMLDivElement> {
 
   useEffect(() => {
     if (mapRef.current && !mapInstanceRef.current) {
-      mapInstanceRef.current = L.map(mapRef.current, { attributionControl: false }).setView([14.023464, -87.211014], 15);
+      mapInstanceRef.current = L.map(mapRef.current, { attributionControl: false }).setView([14.023464, -87.211014], 13);
 
-      L.tileLayer.provider('CartoDB.Positron').addTo(mapInstanceRef.current);
+      L.tileLayer.provider('OpenStreetMap.France').addTo(mapInstanceRef.current);
 
       L.marker([14.023464, -87.211014]).addTo(mapInstanceRef.current)
         .bindPopup('A pretty CSS3 popup. <br> Easily customizable.')

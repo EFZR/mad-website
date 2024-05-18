@@ -1,13 +1,22 @@
 .events__container {
-  grid-template-rows: 13vh 60vh;
+  grid-template-rows: 13vh 57vh;
   grid-template-columns: 100%;
+  row-gap: 1rem;
+  background-color: var(--white-color);
   box-shadow: 0 12px 24px var(--shadow-color);
-  padding-block: 2rem;
   border-radius: 1rem;
+}
+
+@media screen and (min-width: 576px) {
+  .events__container {
+    grid-template-columns: 320px;
+    justify-content: center;
+  }
 }
 
 .carousel {
   position: relative;
+  padding-block: 1rem;
 }
 
 .prev__button,
@@ -16,27 +25,25 @@
   cursor: pointer;
   font-size: 1.5rem;
   background-color: transparent;
+  top: 60%;
+  transform: translateY(-50%);
 }
 
 .prev__button {
-  top: 50%;
   left: 1%;
-  transform: translateY(-50%);
 }
 
 .next__button {
-  top: 50%;
   right: 1%;
-  transform: translateY(-50%);
 }
 
 .carousel__track-container {
-  overflow-x: auto;
+  overflow-x: hidden;
+  scrollbar-width: none;
 }
 
 .carousel__track {
   display: flex;
-  height: 100%;
 }
 
 .carousel__slide {
@@ -60,12 +67,6 @@
 
 .map {
   z-index: var(--z-tooltip);
-}
-
-*::-webkit-scrollbar {
-  height: 0.4rem;
-}
-
-*::-webkit-scrollbar-thumb {
-  height: 0.4rem;
+  border-top: 1px solid var(--first-color-alt);
+  border-radius: 0 0 1rem 1rem;
 }
