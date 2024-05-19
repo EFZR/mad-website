@@ -26,7 +26,6 @@ export default function Events() {
           </p>
         </div>
       )
-
       locationSlider.push(location)
     }
     return locationSlider

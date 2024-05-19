@@ -16,7 +16,7 @@
   --text-color: hsl(var(--hue), 8%, 45%);
   --text-color-light: hsl(var(--hue), 8%, 60%);
   --white-color: hsl(0, 0%, 100%);
-  --body-color: hsl(var(--hue), 25%, 99%);
+  --body-color: hsl(0, 0%, 100%);
   --container-color: hsl(0, 0%, 100%);
   --shadow-color: hsla(var(--hue), 90%, 30%, 0.1);
 
