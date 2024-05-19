@@ -18,7 +18,7 @@ export default function Footer() {
             <a className="footer__link" href="#inicio">Inicio</a>
             <a className="footer__link" href="#acerca">Acerca</a>
             <a className="footer__link" href="#member">Miembros</a>
-            <a className="footer__link" href="#inicio">Eventos</a>
+            <a className="footer__link" href="#events">Eventos</a>
             <a className="footer__link" href="#contact">Contactanos</a>
           </ul>
 
