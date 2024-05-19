@@ -175,6 +175,12 @@
   }
 }
 
+@media screen and (min-width: 1150px) {
+  .slider__wrapper-map .location__item .location__item-title {
+    font-size: 1.35rem;
+  }
+}
+
 .map {
   z-index: var(--z-tooltip);
 }
