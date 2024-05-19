@@ -21,8 +21,8 @@ export default function Events() {
       const location: JSX.Element = (
         <div className="location__item grid" key={i}>
           <p>
-            <span className="location__item-title">Casa de Nancy</span><br />
-            Residencial las uvas
+            <span className="location__item-title">Lorem ipsum</span><br />
+            Lorem ipsum dolor sit.
           </p>
         </div>
       )
